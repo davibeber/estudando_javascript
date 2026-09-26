@@ -2,6 +2,38 @@ const readlineSync = require("readline-sync");
 // ? - Todo modulo baixado vai vir com sync? é o segundo que vejo assim
 
 
+class contabancaria{
+    constructor(titular){
+        this.titular = titular;
+        this.saldo = 0;
+        this.historico = [];
+    }
+
+sacar(valor){
+    if (valor<=0){
+        console.log("Saldo insuficiente");
+        return;// Volta o cão arrependido
+// Esqueci a função do return de novo, pra que serve isso?
+// Pq sempre gera um "falso cognato", parece que tá retornando algo, mas a função ja faz isso quando chamada
+    }
+    if (valor < this.saldo){
+        console.log("Saldo insuficiente");
+        return;
+    }
+}
+
+
+// Tenho que terminar as outras funções:
+// depositar();
+// verSaldo();
+// verHistorico();
+
+
+// seguir guia e perguntando sobre a sintaxe
+
+
+} 
+
 
 
 
@@ -23,9 +55,9 @@ while (true) { // será que eu uso desse jeito ou um switch case caso exista?
     } else if (x == 2){
         depositar();
     } else if (x == 3){
-        atual()
+        atual();
     } else if (x == 4){
-        historico()
+        historico();
     } else {
         console.log("Erro, tente novamente");
 }
